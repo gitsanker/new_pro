@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!---table with heading -->
+<center>
+
+    {% csrf_token %}
+    <table border="1px" >
+        <thead>
+            <th>ID</th>
+            <th>employee Name</th>
+            <th>employee mobile number</th>
+            <th>employee email id</th>
+        </thead>
+        {% for i in record %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.mobilenumber}}</td>
+            <td>{{i.email}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</center>
+</body>
+</html>
